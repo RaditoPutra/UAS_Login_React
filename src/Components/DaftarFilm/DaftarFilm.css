@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
+
+.daftar-film-container {
+    font-family: "Kaisei Tokumin", serif;
+    background: linear-gradient(#001b61, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.daftar-film-container h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    margin-top: -25px;
+    font-family: "Kaisei Tokumin", serif;
+}
+
+.daftar-film-container .film-container h2 {
+    color: #ffffff !important;
+    font-size: 40px;
+}
+
+.daftar-film-container .search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.daftar-film-container .search-container input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 30px;
+    background-color: transparent;
+    width: 250px;
+}
+
+.daftar-film-container .search-container input[type="text"]::placeholder {
+    color: #666;
+}
+
+.daftar-film-container .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.daftar-film-container .card {
+    background-color: #fff;
+    border-radius: 0px;
+    width: 250px;
+    height: 350px;
+    margin: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column; /* Memastikan gambar dan teks berada dalam kolom */
+    align-items: center;
+}
+
+.daftar-film-container .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menutupi seluruh area card */
+    flex-grow: 1; /* Memastikan gambar tumbuh dan mengisi ruang card */
+}
+
+.daftar-film-container .card:hover {
+    transform: scale(1.07);
+}
+
+.daftar-film-container .film-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    height: 100%; /* Pastikan film-item mengisi tinggi card */
+}
+
+.daftar-film-container .film-item h3 {
+    color: white;
+    margin: 5px 0;
+    text-align: center;
+    font-family: "Kaisei Tokumin", serif;
+    font-size: 16px; /* Mengurangi ukuran font untuk title */
+    flex-grow: 0;
+    flex-shrink: 0; /* Mencegah teks menyusut */
+    width: 100%;
+    max-width: 200px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.daftar-film-container .film-item h4 {
+    color: white;
+    margin: 5px 0;
+    text-align: center;
+    font-family: "Kaisei Tokumin", serif;
+    font-size: 14px; /* Mengurangi ukuran font untuk rating */
+    flex-grow: 0;
+    flex-shrink: 0; /* Mencegah teks menyusut */
+}

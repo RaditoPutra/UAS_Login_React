@@ -1,0 +1,301 @@
+/* Home.css */
+
+/* Mengatur latar belakang halaman */
+/* body {
+    background: linear-gradient(#001B61, #000000); 
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+} */
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black; /* Warna hitam untuk sidebar */
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 100;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar-logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: black; /* Warna hitam untuk area logout di sidebar */
+}
+
+
+/* Overlay */
+.page-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+}
+
+.page-overlay.show {
+    display: block;
+}
+
+/* Navbar */
+#navbar {
+    background-color: transparent;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Linear gradient */
+    color: white;
+    z-index: 10;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.navbar-logo img {
+    width: 120px;
+    z-index: 10;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-icon {
+    font-size: 20px;
+    color: #ccc;
+    margin-left: 10px;
+}
+
+/* Main Section */
+main {
+    margin-top: 80px;
+    padding: 20px;
+    background: linear-gradient(#001B61, #000000); /* Linear gradient */
+    color: white;
+}
+
+/* Film Row */
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.row {
+    display: flex;
+    overflow-x: scroll;
+    gap: 15px;
+}
+
+.gambarfilm {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gambarfilm:hover {
+    transform: scale(1.05);
+}
+
+/* Trending Section */
+.card {
+    border: none;
+    margin-bottom: 20px;
+    background: linear-gradient(#001B61, #000000); /* Linear gradient */
+    color: white;
+}
+
+.card-img-top {
+    border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+    background-image: linear-gradient(#0B132B, #0B132B);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .social-icons a {
+    color: white;
+    font-size: 30px;
+    margin: 0 15px;
+}
+
+.footer .social-icons a:hover {
+    color: #f39c12;
+}
+
+.footer .copyright {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out; /* Animasi Fade-in untuk overlay */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Container */
+.modal-container {
+    background: #2c3e50; /* Warna latar belakang modal */
+    border-radius: 12px;  /* Border yang lebih halus */
+    padding: 25px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow untuk depth */
+    color: white;
+    animation: slideUp 0.5s ease-out; /* Animasi modal masuk dari bawah */
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Tombol-tombol modal */
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.modal-buttons .btn {
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons .btn-primary {
+    background-color: #3498db; /* Warna biru tombol utama */
+    color: white;
+    border: 2px solid white;
+}
+
+.modal-buttons .btn-primary:hover {
+    background-color: #2980b9; /* Hover effect */
+}
+
+.modal-buttons .btn-secondary {
+    background-color: #95a5a6; /* Warna tombol kedua */
+    color: white;
+    border: 2px solid white;
+}
+
+.modal-buttons .btn-secondary:hover {
+    background-color: #7f8c8d; /* Hover effect */
+}
+
+/* Modal Heading */
+.modal-container h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Modal Buttons (when pressed) */
+.modal-buttons .btn:active {
+    transform: scale(0.98);
+}
+
+/* Modal Close Animation */
+.modal-overlay.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+

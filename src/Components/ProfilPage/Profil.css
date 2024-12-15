@@ -1,0 +1,137 @@
+/* Membatasi seluruh CSS ke dalam .profile-page */
+.profile-page {
+    font-family: "Kaisei Tokumin", serif;
+    background: linear-gradient(#001B61, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    width: 100%;
+    height: 100vh; /* Pastikan hanya profil yang mengambil tinggi penuh */
+    margin: 0;
+    padding: 0;
+}
+
+.profile-page h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+}
+
+.profile-page .profile-container {
+    width: 100%;
+    max-width: 480px;
+    height: 430px;
+    background-color: #ECECEC;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.profile-page .profile-header {
+    background-color: #0E053D;
+    padding: 20px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-page .header-content {
+    display: flex;
+    align-items: center;
+}
+
+.profile-page .profile-image {
+    border-radius: 70%;
+    width: 120px;
+    height: 120px;
+    margin-right: 7px;
+    display: block;
+    position: relative;
+    top: 20px;
+}
+
+.profile-page .profile-header h2 {
+    color: #fff;
+    margin: 0;
+    font-size: 28px;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.profile-page .account-details {
+    padding: 28px;
+    text-align: left;
+}
+
+.profile-page .account-details h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.profile-page .detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-page .detail-item label {
+    font-weight: bold;
+    color: #333;
+    width: 40%;
+}
+
+.profile-page .detail-item .email,
+.profile-page .detail-item .phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #15075F;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    flex: 1;
+    margin-left: 5px;
+}
+
+.profile-page .edit-button {
+    display: block;
+    width: 30%;
+    text-align: center;
+    background-color: #1c1036;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 45px auto;
+}
+
+.profile-page .edit-button:hover {
+    background-color: #2c204b;
+}
+
+.profile-page .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.profile-page .logo img {
+    width: 250px;
+    margin-top: -80px;
+    margin-left: -20px;
+}
